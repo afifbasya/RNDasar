@@ -12,8 +12,15 @@ function App() {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={Home} />
-                <Stack.Screen name="ListProduct" component={ListProduct} />
-                <Stack.Screen name="TentangKami" component={TentangKami} />
+                <Stack.Screen
+                    name="ListProduct"
+                    component={ListProduct}
+                    options={{
+                        title: "Daftar Product",
+                        // headerShown: false
+                    }}
+                />
+                <Stack.Screen name="TentangKami" component={TentangKami} options={{ title: "Tentang Kami" }} />
             </Stack.Navigator>
         </NavigationContainer>
     );
